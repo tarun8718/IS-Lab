@@ -9,7 +9,11 @@ class railfenceCipherHelper {
         int c = l / depth;
         int k = 0;
         char mat[][] = new char[r][c];
+        // Here we take the input message and depth, create a matrix of characters with
+        //  depth as rows and [l/depth] value as colums
+        //String enc="" is initialised 
         String enc = "";
+        // Matrix is formed with given msg characters
         for (int i = 0; i < c; i++) {
             for (int j = 0; j < r; j++) {
                 if (k != l) {
@@ -19,6 +23,14 @@ class railfenceCipherHelper {
                 }
             }
         }
+        // Matrix is printed
+        for (int i = 0; i < c; i++) {
+            for (int j = 0; j < r; j++) {
+                System.out.print(mat[j][i] + " ");
+            }
+            System.out.println("");
+        }
+        // enc value updated with cipher text
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
                 enc += mat[i][j];
@@ -66,3 +78,30 @@ class railFenceCipher {
         System.out.printf("Decrypted Message : " + dec);
     }
 }
+
+/*
+ * 
+ * O/P: 
+ * Enter username 
+ * TARUNN 
+ * Enter depth 2 
+ * T A 
+ * R U 
+ * N N 
+ * Simulating Railfence
+ * Cipher ------------------------- 
+ * Input Message : TARUNN 
+ * Encrypted Message :
+ * TRNAUN 
+ * Decrypted Message : TARUNN
+ * 
+ * DISC: 
+ * 
+ * The rail fence cipher (also called a zigzag cipher) is a form of
+ * transposition cipher. It derives its name from the way in which it is
+ * encoded.
+ * 
+ * more discpription in encode() function
+ * 
+ * 
+ */
