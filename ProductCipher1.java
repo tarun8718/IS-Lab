@@ -10,7 +10,7 @@ class ProductCipher1 {
         System.out.println("Enter the depth for transposition cipher");
         int n = new Scanner(System.in).nextInt();
 
-        // Substitution encryption
+        // Substitution encryption Encrypt algo 1
         StringBuffer substitutionOutput = new StringBuffer();
         for (int i = 0; i < substitutionInput.length(); i++) {
             char c = substitutionInput.charAt(i);
@@ -20,7 +20,7 @@ class ProductCipher1 {
         System.out.println("\nSubstituted text:");
         System.out.println(substitutionOutput);
 
-        // Transposition encryption
+        // Transposition encryption Encrypt algo 2
         String transpositionInput = substitutionOutput.toString();
         int modulus;
         if ((modulus = transpositionInput.length() % n) != 0) {
@@ -64,3 +64,33 @@ class ProductCipher1 {
         System.out.println(plaintext);
     }
 }
+/*
+ * O/P :
+ * 
+ * Enter the input to be encrypted: 
+ * TARUNN
+ * 
+ * Enter the key value 
+ * 2
+ * 
+ * Enter the depth for transposition cipher 
+ * 2
+ * 
+ * Substituted text: 
+ * VCTWPP
+ * 
+ * Transposition Matrix: 
+ * V T P 
+ * C W P
+ * 
+ * Final encrypted text: VTPCWP Plaintext: 
+ * TARUNN
+ * 
+ * DESC: 
+ * 
+ * Product cipher, data encryption scheme in which the ciphertext produced
+ * by encrypting a plaintext document is subjected to further encryption.
+ * By combining two or more simple transposition ciphers or substitution ciphers, a
+ * more secure encryption may result in Product cipher.
+ * 
+ */

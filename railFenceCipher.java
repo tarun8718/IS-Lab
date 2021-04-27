@@ -95,7 +95,7 @@ class railFenceCipher {
  * TRNAUN 
  * Decrypted Message : TARUNN
  * 
- * DISC: 
+ * DESC: 
  * 
  * The rail fence cipher (also called a zigzag cipher) is a form of
  * transposition cipher. It derives its name from the way in which it is
